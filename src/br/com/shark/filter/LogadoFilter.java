@@ -21,7 +21,7 @@ import br.com.shark.util.Functions;
  * Servlet Filter implementation class LogadoFilter
  */
 @WebFilter(description = "Filtro que verifica se o usuário está logado", 
-	urlPatterns = {"/produto/*", "/home/*", "/user/*", "/", "/venda/*", "/cliente/*"})
+	urlPatterns = {"/produto/*", "/home/*", "/user/*", "/", "/venda/*", "/cliente/*", "/fornecedor/*"})
 public class LogadoFilter implements Filter {
 	
 	private HttpSession sessao;

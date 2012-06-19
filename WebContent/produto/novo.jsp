@@ -86,7 +86,7 @@
 					List<Fornecedor> listFornecedor = (List<Fornecedor>) request.getAttribute("listFornecedor");
 					if (listFornecedor != null && ! listFornecedor.isEmpty()) {
 						for (Fornecedor linha : listFornecedor) {
-							out.print("<option value='" + linha.getId() + "'>" + linha.getNome() + "</option>");
+							out.print("<option value='" + linha.getId() + "'>" + linha.getNome_fantasia() + "</option>");
 						}
 					}
 					%>

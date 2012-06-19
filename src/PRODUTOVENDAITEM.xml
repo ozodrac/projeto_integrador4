@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="PRODUTOVENDAITEM-INSERT">
+		<comments>Insere um item de uma venda.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO prm_produto_venda_item (pro_id, prd_id, prm_quantidade, prm_valor) 
+			VALUES (?, ?, ?, ?);
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDAITEM-DELETE">
+		<comments>Remove todos os itens de uma venda baseado no identificador da mesma.</comments>
+		<sql>
+			<![CDATA[DELETE FROM prm_produto_venda_item WHERE prd_id = ?;]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDAITEM-SELECT_BY_ID">
+		<comments>Obtém os itens de uma venda baseado no id da venda.</comments>
+		<sql>
+			<![CDATA[
+			SELECT pro_id, prd_id, prm_quantidade, prm_valor
+			FROM prm_produto_venda_item
+			WHERE prd_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

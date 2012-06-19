@@ -39,6 +39,16 @@ ResourceBundle bundleGlobal = (ResourceBundle) request.getAttribute("bundleGloba
 	</li>
 	<li>
 		<a href="#"><span>
+			<%= bundleGlobal.getString("fornecedor") %>
+			&nbsp; <em><img src="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_IMAGES") %>/nav/zonebar-downarrow.png" /></em>
+		</span></a>
+		<ul>
+			<li><a href="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_FORNECEDOR") + "/?acao=" + bundleGlobal.getString("novo") %>"><%= bundleGlobal.getString("novo") %> <%= bundleGlobal.getString("fornecedor") %></a></li>
+			<li><a href="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_FORNECEDOR") + "/" %>"><%= bundleGlobal.getString("consultar") %></a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#"><span>
 			<%= bundleGlobal.getString("venda") %>
 			&nbsp; <em><img src="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_IMAGES") %>/nav/zonebar-downarrow.png" /></em>
 		</span></a>
@@ -47,6 +57,7 @@ ResourceBundle bundleGlobal = (ResourceBundle) request.getAttribute("bundleGloba
 			<li><a href="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_VENDA") + "/" %>"><%= bundleGlobal.getString("consultar") %></a></li>
 		</ul>
 	</li>
+	
 	<li>
 		<a href="<%= mapconfig.get("CONFIG-DIR_ROOT", "CONFIG-DIR_USER") + "?acao=editarmeuusuario" %>"><span>
 			<%= bundleGlobal.getString("editarmeuusuario") %>

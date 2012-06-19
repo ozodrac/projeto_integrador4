@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <queries>
-
-
-
-<query id="FORNECEDOR-INSERT">
+	<query id="FORNECEDOR-INSERT">
 		<comments>Insere um fornecedor com todas as suas informações.</comments>
 		<sql>
 			<![CDATA[
@@ -34,7 +31,7 @@
 		<comments>Obtém um fornecedor baseado no identificador do mesmo.</comments>
 		<sql>
 			<![CDATA[
-			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj,, frr_telefone1,
+			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj, frr_telefone1,
 			frr_representante, frr_email, frr_site
 			FROM frr_fornecedor
 			WHERE frr_id = ?;
@@ -45,7 +42,7 @@
 		<comments>Consulta todos os fornecedores.</comments>
 		<sql>
 			<![CDATA[
-			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj,, frr_telefone1,
+			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj, frr_telefone1,
 			frr_representante, frr_email, frr_site
 			FROM frr_fornecedor;
 			]]>

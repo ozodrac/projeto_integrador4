@@ -89,7 +89,7 @@
 					if (listFornecedor != null && ! listFornecedor.isEmpty()) {
 						for (Fornecedor linha : listFornecedor) {
 							String selected = linha.getId() == produto.getFornecedor().getId() ? "selected='selected'" : "";
-							out.print("<option value='" + linha.getId() + "' "+selected+">" + linha.getNome() + "</option>");
+							out.print("<option value='" + linha.getId() + "' "+selected+">" + linha.getNome_fantasia() + "</option>");
 						}
 					}
 					%>

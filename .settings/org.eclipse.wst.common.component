@@ -3,7 +3,7 @@
     <wb-module deploy-name="ProjetoIntegrador4">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB-INF/xml"/>
+        <wb-resource deploy-path="/WEB-INF/classes/" source-path="/ImportedClasses"/>
         <property name="context-root" value="ProjetoIntegrador4"/>
         <property name="java-output-path" value="/ProjetoIntegrador4/build/classes"/>
     </wb-module>

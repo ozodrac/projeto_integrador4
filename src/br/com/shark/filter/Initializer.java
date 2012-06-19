@@ -19,7 +19,7 @@ import br.com.shark.TO.User;
 import br.com.shark.util.Functions;
 import br.com.shark.util.I18N;
 
-@WebFilter({ "/", "*.jsp", "/user/*", "/login/*", "/produto/*", "/venda/*", "/cliente/*" })
+@WebFilter({ "/", "*.jsp", "/user/*", "/login/*", "/produto/*", "/venda/*", "/cliente/*", "/fornecedor/*" })
 public class Initializer implements Filter {
 
 	protected FilterConfig filterConfig;
