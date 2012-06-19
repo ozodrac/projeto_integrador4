@@ -1,0 +1,79 @@
+* { padding: 0; margin: 0; }
+a {color: #000; text-decoration: none;}
+img {border: none;}
+
+body { 
+	font: 62.5% Arial, Helvetica, sans-serif;
+	background: #f4f4f4;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background:#335F95;
+}
+#header a {margin-top: 5px; position: absolute;}
+#navigation {
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ width: 900px;
+ margin: 0px 0px 5px 0px;
+}
+#toolbar { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ width: 900px;
+ margin: 0px 0px 5px 0px;
+ background:#DDD;
+ padding: 10px;
+ height: 50px;
+}
+#toolbar h1 {float: left; margin-top: 16px;}
+#toolbar ul#buttons {list-style: none; float: right; margin-top: 7px;}
+#toolbar ul#buttons li {float: left; padding-left: 5px;}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ width: 900px;
+ margin: 0px 0px 5px 0px;
+ background:#EEE;
+ padding: 10px;
+ min-height: 350px;
+}
+#content .formee-msg-error .error {color: #D10;}
+#content .tabela_consulta th {background-color: #CDDDF1;}
+#content .tabela_consulta th,
+#content .tabela_consulta td {border: 1px solid #DDDDDD; border-collapse: collapse; padding: 5px 0 5px 5px;}
+#content .grid-1-12, .grid-2-12, .grid-3-12, .grid-4-12, .grid-5-12, .grid-6-12, 
+.grid-7-12, .grid-8-12, .grid-9-12, .grid-10-12, .grid-11-12, .grid-12-12{height: auto;}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #333;
+ border: 1px solid #ccc;
+ background-color:#EEE;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+.adicionar_linha {background: url(../../images/icon/icon_adicionar_campo.png) no-repeat; display: block; width: 18px; height: 18px; margin: 5px 0;}
+.remover_linha {background: url(../../images/icon/icon_remover_campo.png) no-repeat; display: block; width: 18px; height: 18px; margin: 5px 0;}
+
+/* formee */
+form .formee-txt.error, .formee input[type="text"].error, .formee input[type="password"].error, .formee input[type="file"].error, .formee textarea.error, .formee select.error {
+	border-color: #ECA6A6 !important;
+	/* shadow */
+	-moz-box-shadow: 0 0 3px 0 rgba(255, 0, 0, .4);
+	-webkit-box-shadow: 0 0 3px 0 rgba(255, 0, 0, .4);
+	box-shadow: 0 0 3px 0 rgba(255, 0, 0, .4);
+}

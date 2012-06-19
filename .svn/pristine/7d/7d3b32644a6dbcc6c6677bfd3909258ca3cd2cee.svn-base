@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="PRODUTOCATEGORIA-SELECT_ALL">
+		<comments>Consulta todas as categorias.</comments>
+		<sql>
+			<![CDATA[
+			SELECT pra_id, pra_nome
+			FROM pra_produto_categoria
+			WHERE lna_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

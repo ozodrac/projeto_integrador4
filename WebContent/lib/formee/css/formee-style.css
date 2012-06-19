@@ -1,0 +1,150 @@
+]/********************************************************************
+
+Project: Formee - http://www.formeeee.org
+Last Updated: 
+Version: 3.1
+Authors: Bernard De Luna - http://www.bernarddeluna.com
+         Daniel Araujo - http://www.dnlaraujo.com.br
+		 Marcello Manso - http://www.marcellomanso.com.br
+			 
+********************************************************************
+Style
+********************************************************************/
+.formee fieldset {
+	background: #fff;
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/* hover effect */
+.grid-1-12:hover,.grid-2-12:hover,.grid-3-12:hover,.grid-4-12:hover,.grid-5-12:hover,.grid-6-12:hover,.grid-7-12:hover,.grid-8-12:hover,.grid-9-12:hover,.grid-10-12:hover,.grid-11-12:hover,.grid-12-12:hover {}
+
+.field-button:hover {
+	background: transparent;
+}
+
+/* Form legend and titles */
+.formee {font: normal 12px/1.1em Tahoma, "Trebuchet MS", Arial, serif;}
+.formee legend,.formee h3 {
+	font-size: 3em;
+	line-height: 1.2em;
+	letter-spacing: -.035em;
+	color: #2b2b2b;
+	font-weight: normal;
+}
+
+/* form elements  */
+.formee-lbl,.formee label {
+	color: #9a9a9a;
+	font-size: 1em;
+	line-height: 1.3em;
+	vertical-align: middle;
+}
+
+.formee-req {
+	font-weight: bold;
+	font-style: normal;
+	color: #d10000;
+	font-size: 1em;
+	line-height: .85em;
+}
+
+.formee .formee-txt,.formee input[type="text"],.formee input[type="password"],.formee input[type="file"],.formee textarea,.formee select
+	{
+	border-color: #c6c6c6 #dadada #eaeaea;
+	background: #fafafa;
+	color: #999;
+	font-size: 1em;
+	font-family: inherit;
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.formee select {
+	border-color: #c6c6c6 #dadada #eaeaea;
+	background: #fafafa;
+	color: #999;
+}
+
+.formee .formee-txt:hover,.formee input[type="text"]:hover,.formee input[type="password"]:hover,.formee input[type="file"]:hover,.formee textarea:hover,.formee select:hover {
+	color: #666;
+	background: #fff none;
+	border-color: #c6c6c6;
+}
+
+form .formee-txt:focus,.formee input[type="text"]:focus,.formee input[type="password"]:focus,.formee input[type="file"]:focus,.formee textarea:focus,.formee select:focus
+	{
+	color: #333;
+	background: #fff none;
+	border-color: #659ec9 #70aedd #a8cfec;
+	outline: 0;
+}
+
+/* form msg status  */
+.formee-msg-info,.formee-msg-warning,.formee-msg-error,.formee-msg-success
+	{
+	color: #2b2b2b;
+	/*corner*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.formee-msg-info h3,.formee-msg-warning h3,.formee-msg-error h3,.formee-msg-success h3 {
+	font-size: 2em;
+	line-height: 1.1em;
+	letter-spacing: -.02em;
+	padding: 0;
+	margin: 0 0 .3em 0;
+}
+
+.formee-msg-info {
+	background: #d1ecf7 url(../../images/formee/form-ic-info.png) no-repeat 12px 10px;
+	border-color: #bcdfef;
+}
+
+.formee-msg-warning {
+	background: #fff6bf url(../../images/formee/form-ic-warning.png) no-repeat 12px 10px;
+	border-color: #fceb77;
+	color: #D66200;
+}
+
+.formee-msg-error {
+	background: #fad0d0 url(../../images/formee/form-ic-error.png) no-repeat 12px 10px;
+	border-color: #f6abab;
+}
+
+.formee-msg-success {
+	background: #e5f8ce url(../../images/formee/form-ic-success.png) no-repeat 12px 10px;
+	border-color: #d0f1a6;
+}
+
+.formee-msg-success strong,.formee-msg-success a {
+	color: #62b548;
+}
+
+.formee-msg-info strong,.formee-msg-info a {
+	color: #11689e;
+}
+
+.formee-msg-warning strong,.formee-msg-warning a {
+	color: #D66200;
+}
+
+.formee-msg-error strong,.formee-msg-error a {
+	color: #b01717;
+}
+
+/* form validation */
+.formee-error {
+	border-color: #FAD0D0 !important;
+	color: #b01717 !important;
+	/* shadow */
+	-moz-box-shadow: 0 0 3px 0 rgba(176, 23, 23, .4);
+	-webkit-box-shadow: 0 0 3px 0 rgba(176, 23, 23, .4);
+	box-shadow: 0 0 3px 0 rgba(176, 23, 23, .4);
+}

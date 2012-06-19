@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<config name="CONFIG-DIR_WWW">
+		<comments>Raiz do sistema</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[C:\Users\Jayson\workspace]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_ROOT">
+		<comments>Raiz do sistema</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/ProjetoIntegrador4]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_ROOT_REAL">
+		<comments>Raiz absoluta do sistema</comments>
+		<parent>CONFIG-DIR_WWW</parent>
+		<value>
+			<![CDATA[/ProjetoIntegrador4/WebContent]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_COMUM">
+		<comments>Pasta comum</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/comum]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_INCLUDE">
+		<comments>Pasta comum/include</comments>
+		<parent>CONFIG-DIR_COMUM</parent>
+		<value>
+			<![CDATA[/include]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_JS">
+		<comments>Pasta comum/js</comments>
+		<parent>CONFIG-DIR_COMUM</parent>
+		<value>
+			<![CDATA[/js]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_CSS">
+		<comments>Pasta comum/css</comments>
+		<parent>CONFIG-DIR_COMUM</parent>
+		<value>
+			<![CDATA[/css]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_IMAGES">
+		<comments>Pasta comum/images</comments>
+		<parent>CONFIG-DIR_COMUM</parent>
+		<value>
+			<![CDATA[/images]]>
+		</value>
+	</config>
+	
+	<config name="CONFIG-DIR_LIB">
+		<comments>Pasta lib</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/lib]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_JQUERY">
+		<comments>Pasta lib/jquery</comments>
+		<parent>CONFIG-DIR_LIB</parent>
+		<value>
+			<![CDATA[/jquery]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_FORMEE">
+		<comments>Pasta lib/formee</comments>
+		<parent>CONFIG-DIR_LIB</parent>
+		<value>
+			<![CDATA[/formee]]>
+		</value>
+	</config>
+	
+	<config name="CONFIG-DIR_LOGIN">
+		<comments>Pasta login</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/login]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_HOME">
+		<comments>Pasta home</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/home]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_CONTACT">
+		<comments>Pasta contact</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/contact]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_USER">
+		<comments>Pasta user</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/user]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_PRODUTO">
+		<comments>Pasta produto</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/produto]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_VENDA">
+		<comments>Pasta venda</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/venda]]>
+		</value>
+	</config>
+	<config name="CONFIG-DIR_CLIENTE">
+		<comments>Pasta cliente</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/cliente]]>
+		</value>
+	</config>
+	
+	<config name="CONFIG-SYS_TITLE">
+		<comments>Nome do sistema</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[Shark]]>
+		</value>
+	</config>
+	<config name="CONFIG-SYS_CHARSET">
+		<comments>Charset do sistema</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[UTF-8]]>
+		</value>
+	</config>
+	<config name="CONFIG-DB_URL">
+		<comments>URL do banco de dados</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[jdbc:mysql://localhost/shark]]>
+		</value>
+	</config>
+	<config name="CONFIG-DB_USER">
+		<comments>Usuário do banco de dados</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[root]]>
+		</value>
+	</config>
+	<config name="CONFIG-DB_PASSWORD">
+		<comments>Password do banco de dados</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[]]>
+		</value>
+	</config>
+</queries>

@@ -1,0 +1,15 @@
+#navigation {background: #B4CDF0; min-height: 30px; padding: 5px 10px 0 10px; }
+#navigation ul#nav {display: block; position:relative; float:left; height: 30px}
+#navigation ul#nav > li {display:inline; float:left; height: 25px}
+#navigation ul#nav > li > a {display:block;}
+#navigation ul#nav li {padding: 5px 10px 0 0px; position: relative;}
+#navigation ul#nav li:hover {background: #CAD9EE;}
+#navigation ul#nav li a {display: block; float: left; height: 23px; position: relative; top: -5px; right: -5px; color: #383838; font-weight: bold; font-size: 1.1em; text-decoration: none;}
+#navigation ul#nav li a:hover {background: #CAD9EE;}
+#navigation ul#nav li a span {position: relative; top: 6px;}
+#navigation ul#nav li ul {display: none; position: absolute; top: 29px; left: 0px; width: 150px; border: 1px solid #ccc; background: white; padding: 3px 0 0 0;}
+#navigation ul#nav li ul li {clear:both; display:block; float: none; padding: 0; margin: 0; height: 100%;}
+#navigation ul#nav li ul li:hover {background: none;}
+#navigation ul#nav li ul li a {display: block; float: none; margin-left: -5px; padding: 5px 0 0 10px; width: 140px;}
+#navigation ul#nav li ul li a:hover {background: #CAD9EE;}
+#navigation ul#nav li ul li ul {position:absolute; z-index:99999999999999;}

@@ -1,0 +1,9 @@
+login = Login
+senha = Senha
+esqueci_minha_senha = Esqueci minha senha
+resetar_senha = Resetar Senha
+cancelar = Cancelar
+email = Email
+msg_usuario_senha_invalido = Usuário ou senha inválidos.
+msg_nova_senha = Sua nova senha é: 
+msg_usuario_nao_cadastrado = Nenhum usuário cadastrado com o login e email informados.

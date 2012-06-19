@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="FORNECEDOR-SELECT_ALL">
+		<comments>Consulta todos os fornecedores.</comments>
+		<sql>
+			<![CDATA[
+			SELECT frr_id, frr_nome_fantasia
+			FROM frr_fornecedor;
+			]]>
+		</sql>
+	</query>
+</queries>

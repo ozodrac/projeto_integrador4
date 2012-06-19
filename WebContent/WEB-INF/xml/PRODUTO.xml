@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="PRODUTO-INSERT">
+		<comments>Insere um produto com todas as suas informações.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO pro_produto (frr_id, pra_id, pro_descricao, pro_marca, pro_valor_compra, pro_valor_venda_avista,
+			pro_valor_venda_prazo, pro_garantia, pro_quantidade) 
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTO-UPDATE">
+		<comments>Atualiza um produto baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE pro_produto 
+			SET frr_id = ?, pra_id = ?, pro_descricao = ?, pro_marca = ?, pro_valor_compra = ?, pro_valor_venda_avista = ?,
+			pro_valor_venda_prazo = ?, pro_garantia = ?, pro_quantidade = ?
+			WHERE pro_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTO-DELETE">
+		<comments>Remove um produto baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[DELETE FROM pro_produto WHERE pro_id = ?;]]>
+		</sql>
+	</query>
+	<query id="PRODUTO-SELECT_BY_ID">
+		<comments>Obtém um produto baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			SELECT pro_id, frr_id, pra_id, pro_descricao, pro_marca, pro_valor_compra, pro_valor_venda_avista,
+			pro_valor_venda_prazo, pro_garantia, pro_quantidade
+			FROM pro_produto
+			WHERE pro_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTO-SELECT_ALL">
+		<comments>Consulta todos os produtos.</comments>
+		<sql>
+			<![CDATA[
+			SELECT
+				pro_id, pro_descricao, pro_marca, pro_valor_venda_avista, pro_quantidade,
+				pra_id, pra_nome
+			FROM pro_produto
+			INNER JOIN
+				pra_produto_categoria pra
+			USING(pra_id)
+			WHERE pra.lna_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

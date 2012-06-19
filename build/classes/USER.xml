@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="USER-INSERT">
+		<comments>Insere um usuario com todas as suas informações.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO uso_usuario (pro_id, uso_nome, uso_login, uso_senha, uso_email, lna_id, uso_dt_cadastro, uso_cpf) 
+			VALUES (?, ?, ?, MD5(?), ?, ?, NOW(), ?);
+			]]>
+		</sql>
+	</query>
+	<query id="USER-UPDATE">
+		<comments>Atualiza um usuario baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE uso_usuario 
+			SET uso_nome = ?, uso_login = ?, uso_senha = MD5(?),
+			uso_email = ?, lna_id = ?, pro_id = ?, uso_cpf = ?
+			WHERE uso_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="USER-DELETE">
+		<comments>Remove um usuario baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[DELETE FROM uso_usuario WHERE uso_id = ?;]]>
+		</sql>
+	</query>
+	<query id="USER-SELECT_BY_ID">
+		<comments>Obtém um usuario baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			SELECT uso_id, uso_nome, uso_login, uso_senha, uso_email, lna_id, uso_dt_cadastro, pro_id, uso_cpf
+			FROM uso_usuario
+			WHERE uso_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="USER-SELECT_ALL">
+		<comments>Consulta todos os usuários.</comments>
+		<sql>
+			<![CDATA[
+			SELECT uso_id, uso_nome, uso_login, uso_email, uso_dt_cadastro
+			FROM uso_usuario;
+			]]>
+		</sql>
+	</query>
+	<query id="USER-VALIDAR_LOGIN">
+		<comments>Obtém um usuario baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			SELECT uso_id, uso_nome, lna_id
+			FROM uso_usuario
+			WHERE uso_login = ?
+			AND uso_senha = MD5(?);
+			]]>
+		</sql>
+	</query>
+	<query id="USER-VALIDAR_RECUPERAR_SENHA">
+		<comments>Valida as informações do usuário para geração de nova senha.</comments>
+		<sql>
+			<![CDATA[
+			SELECT uso_id
+			FROM uso_usuario
+			WHERE uso_login = ?
+			AND uso_email = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="USER-ALTERAR_SENHA">
+		<comments>Atualiza a senha do usuario.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE uso_usuario 
+			SET uso_senha = MD5(?)
+			WHERE uso_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

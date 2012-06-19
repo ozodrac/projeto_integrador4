@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="PERFILUSUARIO-SELECT_ALL">
+		<comments>Consulta todos os perfis de usuário.</comments>
+		<sql>
+			<![CDATA[
+			SELECT pro_id, pro_nome
+			FROM pro_perfil_usuario
+			WHERE lna_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

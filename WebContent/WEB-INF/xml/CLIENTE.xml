@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="CLIENTE-INSERT">
+		<comments>Insere um cliente com todas as suas informações.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO cle_cliente (cle_nome, cle_cpf, cle_telefone_celular, cle_sexo, cle_data_nascimento, cle_email,
+			cle_telefone_residencial, cle_telefone_comercial, cle_endereco) 
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+			]]>
+		</sql>
+	</query>
+	<query id="CLIENTE-UPDATE">
+		<comments>Atualiza um cliente baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE cle_cliente 
+			SET cle_nome = ?, cle_cpf = ?, cle_telefone_celular = ?, cle_sexo = ?, cle_data_nascimento = ?, cle_email = ?,
+			cle_telefone_residencial = ?, cle_telefone_comercial = ?, cle_endereco = ?
+			WHERE cle_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="CLIENTE-DELETE">
+		<comments>Remove um cliente baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[DELETE FROM cle_cliente WHERE cle_id = ?;]]>
+		</sql>
+	</query>
+	<query id="CLIENTE-SELECT_BY_ID">
+		<comments>Obtém um cliente baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			SELECT cle_id, cle_nome, cle_cpf, cle_telefone_celular, cle_sexo, cle_data_nascimento, cle_email,
+			cle_telefone_residencial, cle_telefone_comercial, cle_endereco
+			FROM cle_cliente
+			WHERE cle_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="CLIENTE-SELECT_ALL">
+		<comments>Consulta todos os clientes.</comments>
+		<sql>
+			<![CDATA[
+			SELECT cle_id, cle_nome, cle_sexo, cle_email, cle_telefone_celular
+			FROM cle_cliente;
+			]]>
+		</sql>
+	</query>
+</queries>

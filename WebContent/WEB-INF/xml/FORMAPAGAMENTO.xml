@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="FORMAPAGAMENTO-SELECT_ALL">
+		<comments>Consulta todas as formas de pagamento.</comments>
+		<sql>
+			<![CDATA[
+			SELECT fro_id, fro_nome
+			FROM fro_forma_pagamento
+			WHERE lna_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>

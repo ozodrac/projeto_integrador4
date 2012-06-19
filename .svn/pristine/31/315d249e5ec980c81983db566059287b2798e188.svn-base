@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query id="PRODUTOVENDA-INSERT">
+		<comments>Insere uma venda com todas as suas informações.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO prd_produto_venda (uso_id, cle_id, fro_id, prd_data_cadastro) 
+			VALUES (?, ?, ?, now());
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDA-LAST_INSERT_ID">
+		<comments>Obtem o ultimo id de venda inserido.</comments>
+		<sql>
+			<![CDATA[
+			SELECT MAX(prd_id) AS max
+			FROM prd_produto_venda;
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDA-UPDATE">
+		<comments>Atualiza uma venda baseado no identificador da mesma.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE prd_produto_venda 
+			SET cle_id = ?, fro_id = ?
+			WHERE prd_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDA-DELETE">
+		<comments>Remove uma venda baseado no identificador da mesma.</comments>
+		<sql>
+			<![CDATA[DELETE FROM prd_produto_venda WHERE prd_id = ?;]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDA-SELECT_BY_ID">
+		<comments>Obtém uma venda baseado no identificador da mesma.</comments>
+		<sql>
+			<![CDATA[
+			SELECT prd_id, uso_id, cle_id, fro_id, prd_data_cadastro
+			FROM prd_produto_venda
+			WHERE prd_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="PRODUTOVENDA-SELECT_ALL">
+		<comments>Consulta todos os produtos.</comments>
+		<sql>
+			<![CDATA[
+			SELECT
+				prd_id, uso_id, cle_id, fro_id, prd_data_cadastro,
+				uso_nome, cle_nome, fro_nome
+			FROM prd_produto_venda
+			INNER JOIN
+				cle_cliente
+			USING(cle_id)
+			INNER JOIN
+				uso_usuario
+			USING(uso_id)
+			INNER JOIN
+				fro_forma_pagamento fro
+			USING(fro_id)
+			WHERE fro.lna_id = ?;
+			]]>
+		</sql>
+	</query>
+</queries>
