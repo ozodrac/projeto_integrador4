@@ -61,7 +61,8 @@
 			INNER JOIN
 				fro_forma_pagamento fro
 			USING(fro_id)
-			WHERE fro.lna_id = ?;
+			WHERE fro.lna_id = ?
+			ORDER BY prd_id DESC;
 			]]>
 		</sql>
 	</query>

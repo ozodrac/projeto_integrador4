@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	calcularValorTotal();
+	
 	$("#adicionar_produto").click(function(e){
 		e.preventDefault();
 		var bt_remover = "<a href='#' class='remover_linha remover_produto'></a>";
@@ -19,12 +22,12 @@ $(document).ready(function(){
 		if ($(this).val() != "") {
 			var val = $(this).children(":selected").data("valor");
 			var tr = $(this).parents("tr:first");
-			if (tr.find(".prm_quantidade").val() != "") {
-				val *= parseInt(tr.find(".prm_quantidade").val());
-			}
 			tr.find(".prm_valor").val(val);
+			calcularValorTotal();
 		}
 	});
+	
+	$(document).on("change", ".prm_quantidade, .prm_valor", calcularValorTotal);
 	
 });
 
@@ -44,6 +47,24 @@ $.validator.addClassRules("produto_repetido", {
 	produto_repetido: true
 });
 
+function calcularValorTotal() {
+	var valor_total = 0;
+	$(".tabela_consulta tbody tr").each(function(){
+		var valor = getFloatVal($(this).find(".prm_valor").val());
+		var qtd = getFloatVal($(this).find(".prm_quantidade").val());
+		valor *= qtd == 0 ? 1 : qtd;
+		valor_total += valor;
+	});
+	$("#valor_total").val(valor_total);
+}
+
 function resetarCamposProduto() {
 	$(this).find("input, select").val("");
+}
+
+function getFloatVal(valor) {
+	if (valor != "") {
+		return parseFloat(valor);
+	}
+	return 0;
 }

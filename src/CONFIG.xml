@@ -4,7 +4,7 @@
 		<comments>Raiz do sistema</comments>
 		<parent></parent>
 		<value>
-			<![CDATA[C:\eclipse EE\workspace]]>
+			<![CDATA[C:\Users\Jayson\workspace]]>
 		</value>
 	</config>
 	<config name="CONFIG-DIR_ROOT">

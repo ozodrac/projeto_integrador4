@@ -70,6 +70,10 @@
 					%>
 				</select>
 			</div>
+			<div class="grid-3-12 right">
+				<label>Valor Total</label>
+				<input type="text" id="valor_total" value="0.00" disabled="disabled" />
+			</div>
 			
 			<table width="100%" class="tabela_consulta" cellpadding="0" cellspacing="0">
 				<thead>

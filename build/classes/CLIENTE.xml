@@ -43,7 +43,8 @@
 		<sql>
 			<![CDATA[
 			SELECT cle_id, cle_nome, cle_sexo, cle_email, cle_telefone_celular
-			FROM cle_cliente;
+			FROM cle_cliente
+			ORDER BY cle_nome ASC;
 			]]>
 		</sql>
 	</query>

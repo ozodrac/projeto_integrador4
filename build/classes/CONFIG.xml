@@ -121,6 +121,13 @@
 			<![CDATA[/venda]]>
 		</value>
 	</config>
+	<config name="CONFIG-DIR_FORNECEDOR">
+		<comments>Pasta Fornecedor</comments>
+		<parent></parent>
+		<value>
+			<![CDATA[/fornecedor]]>
+		</value>
+	</config>
 	<config name="CONFIG-DIR_CLIENTE">
 		<comments>Pasta cliente</comments>
 		<parent></parent>
@@ -128,7 +135,6 @@
 			<![CDATA[/cliente]]>
 		</value>
 	</config>
-	
 	<config name="CONFIG-SYS_TITLE">
 		<comments>Nome do sistema</comments>
 		<parent></parent>

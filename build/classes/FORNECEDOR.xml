@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <queries>
+	<query id="FORNECEDOR-INSERT">
+		<comments>Insere um fornecedor com todas as suas informações.</comments>
+		<sql>
+			<![CDATA[
+			INSERT INTO frr_fornecedor (frr_nome_fantasia, frr_razao_social, frr_cnpj, frr_telefone1,
+			frr_representante, frr_email, frr_site) 
+			VALUES (?, ?, ?, ?, ?, ?, ?);
+			]]>
+		</sql>
+	</query>
+	<query id="FORNECEDOR-UPDATE">
+		<comments>Atualiza um fornecedor baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			UPDATE frr_fornecedor 
+			SET frr_nome_fantasia = ?, frr_razao_social = ?, frr_cnpj = ?, frr_telefone1 = ?,
+			frr_representante = ?, frr_email = ?, frr_site = ?
+			WHERE frr_id = ?;
+			]]>
+		</sql>
+	</query>
+	<query id="FORNECEDOR-DELETE">
+		<comments>Remove um fornecedor baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[DELETE FROM frr_fornecedor WHERE frr_id = ?;]]>
+		</sql>
+	</query>
+	<query id="FORNECEDOR-SELECT_BY_ID">
+		<comments>Obtém um fornecedor baseado no identificador do mesmo.</comments>
+		<sql>
+			<![CDATA[
+			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj, frr_telefone1,
+			frr_representante, frr_email, frr_site
+			FROM frr_fornecedor
+			WHERE frr_id = ?;
+			]]>
+		</sql>
+	</query>
 	<query id="FORNECEDOR-SELECT_ALL">
 		<comments>Consulta todos os fornecedores.</comments>
 		<sql>
 			<![CDATA[
-			SELECT frr_id, frr_nome_fantasia
+			SELECT frr_id, frr_nome_fantasia, frr_razao_social, frr_cnpj, frr_telefone1,
+			frr_representante, frr_email, frr_site
 			FROM frr_fornecedor;
 			]]>
 		</sql>
